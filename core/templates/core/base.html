@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sistema{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'core/adminlte/plugins/fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/adminlte/dist/css/adminlte.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css_personalizado.css' %}">
+
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        {% include "core/includes/navbar.html" %}
+
+        <!-- Sidebar -->
+        {% include "core/includes/sidebar.html" %}
+
+        <!-- Contenido principal -->
+        <div class="content-wrapper">
+            <section class="content pt-3">
+                <div class="container-fluid">
+                    {% block content %}
+                    <!-- Aquí irá el contenido de cada página -->
+                    {% endblock %}
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        {% include "core/includes/footer.html" %}
+
+    </div>
+
+    <!-- Scripts requeridos -->
+    <!-- jQuery -->
+    <script src="{% static 'core/adminlte/plugins/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'core/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'core/adminlte/dist/js/adminlte.min.js' %}"></script>
+
+</body>
+</html>

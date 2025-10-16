@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}SYSINVENT{% endblock %}</title>
+
+  <link rel="stylesheet" href="{% static 'core/adminlte/plugins/fontawesome-free/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'core/adminlte/dist/css/adminlte.min.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css_personalizado.css' %}">
+
+</head>
+<body class="hold-transition login-page">
+
+  {% block content %}{% endblock %}
+
+    <!-- Scripts requeridos -->
+    <!-- jQuery -->
+    <script src="{% static 'core/adminlte/plugins/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'core/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'core/adminlte/dist/js/adminlte.min.js' %}"></script>
+</body>
+</html>
