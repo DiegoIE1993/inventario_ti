@@ -1,0 +1,10 @@
+html, body {
+    height: 100%;
+}
+  
+
+/* Sobrescribir color del sidebar */
+.sidebar-dark-primary {
+    background-color: #001f3f !important;  /* azul oscuro personalizado */
+}
+
